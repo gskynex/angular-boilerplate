@@ -1,0 +1,80 @@
+{
+  "name": "angular-boilerplate",
+  "description": "Angular Boilerplate with ESLint, StyleLint, Jest",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "ng serve -o",
+    "build": "ng build",
+    "build:watch": "ng build --watch --configuration development",
+    "lint": "npm run lint:ts && npm run lint:scss",
+    "lint:scss": "stylelint 'src/**/*.scss'",
+    "lint:ts": "ng lint",
+    "lint:ts:fix": "ng lint --fix",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@angular/animations": "^17.0.7",
+    "@angular/common": "^17.0.7",
+    "@angular/compiler": "^17.0.7",
+    "@angular/core": "^17.0.7",
+    "@angular/forms": "^17.0.7",
+    "@angular/platform-browser": "^17.0.7",
+    "@angular/platform-browser-dynamic": "^17.0.7",
+    "@angular/router": "^17.0.7",
+    "rxjs": "~7.8.1",
+    "tslib": "^2.6.2",
+    "zone.js": "~0.14.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.0.7",
+    "@angular-eslint/builder": "17.1.1",
+    "@angular-eslint/eslint-plugin": "17.1.1",
+    "@angular-eslint/eslint-plugin-template": "17.1.1",
+    "@angular-eslint/schematics": "17.1.1",
+    "@angular-eslint/template-parser": "17.1.1",
+    "@angular/cli": "^17.0.7",
+    "@angular/compiler-cli": "^17.0.7",
+    "@types/jest": "^29.5.11",
+    "@typescript-eslint/eslint-plugin": "6.13.1",
+    "@typescript-eslint/parser": "6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-typescript-sort-keys": "^3.1.0",
+    "eslint-plugin-unicorn": "^50.0.1",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-preset-angular": "^13.1.4",
+    "lint-staged": "^15.2.0",
+    "postcss-scss": "^4.0.9",
+    "stylelint": "^16.0.2",
+    "stylelint-config-standard-scss": "^12.0.0",
+    "stylelint-order": "^6.0.4",
+    "typescript": "~5.2.2"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setup-jest.ts"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run lint:ts"
+    ],
+    "*.{css,scss}": [
+      "npm run lint:scss"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
+    }
+  }
+}
