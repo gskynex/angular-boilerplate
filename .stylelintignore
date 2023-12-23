@@ -1,0 +1,7 @@
+.angular
+.idea
+.vscode
+dist
+client
+coverage
+node_modules
