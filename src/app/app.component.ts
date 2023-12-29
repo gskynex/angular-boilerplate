@@ -6,4 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   templateUrl: './app.component.html',
 })
-export class AppComponent {}
+export class AppComponent {
+  readonly title = 'Angular Boilerplate';
+}

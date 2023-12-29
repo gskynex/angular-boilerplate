@@ -1,7 +1,7 @@
 {
   "name": "angular-boilerplate",
-  "description": "Angular Boilerplate with ESLint, StyleLint, Jest",
-  "version": "0.0.0",
+  "description": "Angular Boilerplate with ESLint, StyleLint, Jest, Docker",
+  "version": "17.0.8",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -17,31 +17,31 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@angular/animations": "^17.0.7",
-    "@angular/common": "^17.0.7",
-    "@angular/compiler": "^17.0.7",
-    "@angular/core": "^17.0.7",
-    "@angular/forms": "^17.0.7",
-    "@angular/platform-browser": "^17.0.7",
-    "@angular/platform-browser-dynamic": "^17.0.7",
-    "@angular/router": "^17.0.7",
+    "@angular/animations": "^17.0.8",
+    "@angular/common": "^17.0.8",
+    "@angular/compiler": "^17.0.8",
+    "@angular/core": "^17.0.8",
+    "@angular/forms": "^17.0.8",
+    "@angular/platform-browser": "^17.0.8",
+    "@angular/platform-browser-dynamic": "^17.0.8",
+    "@angular/router": "^17.0.8",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.2",
     "zone.js": "~0.14.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.0.7",
+    "@angular-devkit/build-angular": "^17.0.8",
     "@angular-eslint/builder": "17.1.1",
     "@angular-eslint/eslint-plugin": "17.1.1",
     "@angular-eslint/eslint-plugin-template": "17.1.1",
     "@angular-eslint/schematics": "17.1.1",
     "@angular-eslint/template-parser": "17.1.1",
-    "@angular/cli": "^17.0.7",
-    "@angular/compiler-cli": "^17.0.7",
+    "@angular/cli": "^17.0.8",
+    "@angular/compiler-cli": "^17.0.8",
     "@types/jest": "^29.5.11",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
-    "eslint": "^8.54.0",
+    "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-typescript-sort-keys": "^3.1.0",
@@ -76,5 +76,8 @@
       "pre-commit": "lint-staged",
       "pre-push": "npm run test"
     }
+  },
+  "engines": {
+    "node": "^18.13.0 || >=20.9.0"
   }
 }
