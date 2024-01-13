@@ -80,19 +80,19 @@ The prepare command installs Git Hooks using Husky.
 
 ### Dockerize project
 
-### Build image from the Dockerfile:
+#### Build image from the Dockerfile:
 
 ```bash
 docker build -t angular-boilerplate .
 ```
 
-### Run the project as a container using the Docker:
+#### Run the project as a container using the Docker:
 
 ```bash
 docker run -d -p80:80 --name=angular-boilerplate angular-boilerplate
 ```
 
-### Open Browser:
+#### Open Browser:
 
 ```bash
 http://localhost:80
